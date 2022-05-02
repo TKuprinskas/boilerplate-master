@@ -29,7 +29,6 @@ export const Button = styled.button<Styles<Theme>>`
   padding: ${({ padding }) => (padding ? padding : '0.5rem 1rem')};
   width: 100%;
   font-weight: ${({ theme }) => theme.fontWeights.fw700};
-  cursor: pointer;
 
   && {
     ${buttonProps};
