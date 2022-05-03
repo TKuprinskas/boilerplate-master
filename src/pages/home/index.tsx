@@ -1,12 +1,6 @@
 import React from 'react';
 
-import { Header } from './sections/Header';
-import { HotRecipes } from './sections/HotRecipes';
-import { Categories } from './sections/Categories';
-import { TastyRecipes } from './sections/TastyRecipes';
-import { Chef } from './sections/Chef';
-import { Subscribe } from './sections/Subscribe';
-import { Footer } from './sections/Footer';
+import { Categories, Chef, Footer, Header, HotRecipes, Subscribe, TastyRecipes } from './sections';
 import { theme } from 'styles/theme';
 import { ThemeProvider } from 'styled-components/macro';
 
