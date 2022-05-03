@@ -109,17 +109,20 @@ export const TastyRecipes: React.FC = () => {
           gridTemplateColumns="repeat(3, auto)"
           justifyContent="space-between"
         >
-          {TastyRecipesCardList.map((item, index) => (
-            <TastyRecipesCard
-              key={index}
-              src={item.src}
-              title={item.title}
-              meal={item.meal}
-              time={item.time}
-              timeIcon={item.timeIcon}
-              mealIcon={item.mealIcon}
-            />
-          ))}
+          {TastyRecipesCardList.map((item, index) => {
+            const { src, title, meal, time, timeIcon, mealIcon } = item;
+            return (
+              <TastyRecipesCard
+                key={index}
+                src={src}
+                title={title}
+                meal={meal}
+                time={time}
+                timeIcon={timeIcon}
+                mealIcon={mealIcon}
+              />
+            );
+          })}
         </GridWrapper>
       ) : (
         <FlexWrapper
@@ -128,17 +131,20 @@ export const TastyRecipes: React.FC = () => {
           justifyContent="space-between"
           marginBottom="10px"
         >
-          {TastyRecipesCardList.map((item, index) => (
-            <TastyRecipesCard
-              key={index}
-              src={item.src}
-              title={item.title}
-              meal={item.meal}
-              time={item.time}
-              timeIcon={item.timeIcon}
-              mealIcon={item.mealIcon}
-            />
-          ))}
+          {TastyRecipesCardList.map((item, index) => {
+            const { src, title, meal, time, timeIcon, mealIcon } = item;
+            return (
+              <TastyRecipesCard
+                key={index}
+                src={src}
+                title={title}
+                meal={meal}
+                time={time}
+                timeIcon={timeIcon}
+                mealIcon={mealIcon}
+              />
+            );
+          })}
         </FlexWrapper>
       )}
     </SectionWrapper>

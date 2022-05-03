@@ -62,22 +62,25 @@ export const Header: React.FC = () => {
           flexDirection={isTablet ? 'column' : 'row'}
           alignItems="center"
         >
-          {menuItems.map((item) => (
-            <Box key={item.name} marginTop={isTablet ? '10px' : '0'}>
-              <Link
-                to={item.link}
-                style={{
-                  textDecoration: 'none',
-                  color: 'black',
-                  fontFamily: 'Inter',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                }}
-              >
-                {item.name}
-              </Link>
-            </Box>
-          ))}
+          {menuItems.map((item) => {
+            const { name, link } = item;
+            return (
+              <Box key={item.name} marginTop={isTablet ? '10px' : '0'}>
+                <Link
+                  to={link}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black',
+                    fontFamily: 'Inter',
+                    fontSize: '16px',
+                    fontWeight: '500',
+                  }}
+                >
+                  {name}
+                </Link>
+              </Box>
+            );
+          })}
         </FlexWrapper>
         <FlexWrapper
           width={isTablet ? '100%' : '5%'}
@@ -85,11 +88,14 @@ export const Header: React.FC = () => {
           justifyContent={isTablet ? 'space-around' : 'space-between'}
           marginTop={isTablet ? '20px' : '0'}
         >
-          {socialItems.map((item) => (
-            <Box key={item.name}>
-              <a href={item.link}>{item.icon}</a>
-            </Box>
-          ))}
+          {socialItems.map((item) => {
+            const { name, link, icon } = item;
+            return (
+              <Box key={item.name}>
+                <a href={item.link}>{item.icon}</a>
+              </Box>
+            );
+          })}
         </FlexWrapper>
       </FlexWrapper>
     </SectionWrapper>
