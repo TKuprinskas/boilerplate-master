@@ -9,6 +9,10 @@ export * from './wrappers/Container';
 //input
 export * from './inputs/Input';
 
+//cards
+export * from './cards/Categories';
+export * from './cards/TastyRecipes';
+
 export * from './typography/TypographyHelpers';
 export * from './typography/Typography';
 

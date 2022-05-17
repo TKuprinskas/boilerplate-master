@@ -97,12 +97,6 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.p.lineHeight};
         font-weight: ${theme.typography.p.fontWeight};
       `;
-    case 'body16':
-      return css`
-        font-size: ${theme.typography.h1.fontSize};
-        line-height: ${theme.typography.h1.lineHeight};
-        font-weight: ${theme.typography.h1.fontWeight};
-      `;
     case 'caption12':
       return css`
         font-size: ${theme.typography.h1.fontSize};
